@@ -4,14 +4,21 @@ version: 2.1
 orbs:
   # Declare a dependency on the welcome-orb
   welcome: circleci/welcome-orb@0.4.1
+executors:
+  ubuntu:
+    machine:
+      image: ubuntu-2004:202010-01
+    resource_class: medium
+
+jobs:
+  welcome:
+    executor: ubuntu
+    steps:
+      - welcome/run
 # Orchestrate or schedule a set of jobs
 workflows:
   # Name the workflow "welcome"
   welcome:
     # Run the welcome/run job in its own container
     jobs:
-      machine:
-        image: ubuntu-2004:202010-01
-      resource_class: medium
-      steps:
-        - welcome/run
+      welcome:
