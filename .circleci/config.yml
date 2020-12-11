@@ -14,8 +14,7 @@ jobs:
   welcome:
     executor: ubuntu
     steps:
-      - run: |
-        echo "hello world"
+      - run: echo "hello world"
 # Orchestrate or schedule a set of jobs
 workflows:
   # Name the workflow "welcome"
