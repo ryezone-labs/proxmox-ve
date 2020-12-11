@@ -43,8 +43,10 @@ jobs:
       - name: Install virtualbox
         run: |
           sudo apt update
-          wget –q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add -
-          wget -q https://www.virtualbox.org/download/oracle_vbox.asc -O- | sudo apt-key add –
+          wget –q https://www.virtualbox.org/download/oracle_vbox_2016.asc -o oracle_vbox_2016.asc
+          sudo apt-key add oracle_vbox_2016.asc
+          wget -q https://www.virtualbox.org/download/oracle_vbox.asc -o oracle_vbox.asc
+          sudo apt-key add oracle_vbox.asc
           sudo add-apt-repository "deb http://download.virtualbox.org/virtualbox/debian bionic contrib"
           sudo apt update
           sudo apt install virutalbox-6.0
