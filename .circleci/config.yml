@@ -15,10 +15,9 @@ jobs:
     executor: ubuntu
     steps:
       - run: git clone --depth 1 "${CIRCLE_REPOSITORY_URL}" --branch "${CIRCLE_BRANCH}"
-      - run: cd ./${CIRCLE_PROJECT_REPONAME}
-      - run: bash ./.cicd/install-packer.sh
-      - run: bash ./.cicd/install-virtualbox.sh
-      - run: make build-virtualbox
+      - run: bash ./${CIRCLE_PROJECT_REPONAME}/.cicd/install-packer.sh
+      - run: bash ./${CIRCLE_PROJECT_REPONAME}/.cicd/install-virtualbox.sh
+      - run: make --makefile=./${CIRCLE_PROJECT_REPONAME}/Makefile build-virtualbox
 # Orchestrate or schedule a set of jobs
 workflows:
   # Name the workflow "welcome"
