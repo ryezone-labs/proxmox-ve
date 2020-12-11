@@ -45,11 +45,11 @@ jobs:
           echo 'download key oracle_vbox_2016.asc'
           wget –q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O oracle_vbox_2016.asc
           echo 'adding apt key oracle_vbox_2016.asc'
-          sudo apt-key add oracle_vbox_2016.asc
-          echo 'add virtualbox repository'
-          sudo add-apt-repository "deb http://download.virtualbox.org/virtualbox/debian bionic contrib"
-          echo 'apt update'
-          sudo apt update
-          echo 'install virtualbox'
-          sudo apt install virutalbox-6.0
+          # sudo apt-key add oracle_vbox_2016.asc
+          # echo 'add virtualbox repository'
+          # sudo add-apt-repository "deb http://download.virtualbox.org/virtualbox/debian bionic contrib"
+          # echo 'apt update'
+          # sudo apt update
+          # echo 'install virtualbox'
+          # sudo apt install virutalbox-6.0
           
