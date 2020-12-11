@@ -14,7 +14,8 @@ jobs:
   welcome:
     executor: ubuntu
     steps:
-      - run: ls
+      - run: git clone --depth 1 "${CIRCLE_REPOSITORY_URL}" --branch "${CIRCLE_BRANCH}"
+      - run: cd ./${CIRCLE_PROJECT_REPONAME}
       - run: bash ./.cicd/install-packer.sh
       - run: bash ./.cicd/install-virtualbox.sh
       - run: make build-virtualbox
