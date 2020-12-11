@@ -43,7 +43,7 @@ jobs:
       - name: Install virtualbox
         run: |
           echo 'download key oracle_vbox_2016.asc'
-          wget –q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O oracle_vbox_2016.asc
+          curl https://www.virtualbox.org/download/oracle_vbox_2016.asc -o oracle_vbox_2016.asc
           echo 'adding apt key oracle_vbox_2016.asc'
           # sudo apt-key add oracle_vbox_2016.asc
           # echo 'add virtualbox repository'
