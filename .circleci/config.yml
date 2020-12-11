@@ -17,7 +17,6 @@ jobs:
       - run: mkdir -p .local .local/bin
       - run: git clone --depth 1 "${CIRCLE_REPOSITORY_URL}" --branch "${CIRCLE_BRANCH}"
       - run: bash ./${CIRCLE_PROJECT_REPONAME}/.cicd/install-packer.sh
-      - run: export "PATH=${PATH}:${PWD}/.local/bin" >> $BASH_ENV
       - run: bash ./${CIRCLE_PROJECT_REPONAME}/.cicd/install-virtualbox.sh
       - run: PATH=${PATH}:${PWD}/.local/bin make --directory=./${CIRCLE_PROJECT_REPONAME} build-virtualbox
 # Orchestrate or schedule a set of jobs
