@@ -15,6 +15,7 @@ jobs:
     executor: ubuntu
     steps:
       - run: ./.cicd/install-packer.sh
+      - run: ./.cicd/install-virtualbox.sh
 # Orchestrate or schedule a set of jobs
 workflows:
   # Name the workflow "welcome"
