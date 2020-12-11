@@ -52,4 +52,7 @@ jobs:
           sudo apt update
           echo 'install virtualbox'
           sudo apt install virtualbox-6.1
-          
+      
+      - name: build virtualbox vagrant box
+        run: |
+          make build-virtualbox
