@@ -39,8 +39,14 @@ jobs:
           # The version to use
           packer-version: latest
       
-      - name: Packer validate template without argument
-        uses: dawitnida/packer-github-actions/validate@master
-        env:
-          GITHUB_TOKEN: ${{ github.token }}
-          TEMPLATE_FILE_NAME: proxmox-ve.json
+      # Runs a set of commands using the runners shell
+      - name: Install virtualbox
+        run: |
+          sudo apt update
+          sudo apt install software–properties–common
+          wget –q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add -
+          wget -q https://www.virtualbox.org/download/oracle_vbox.asc -O- | sudo apt-key add –
+          sudo add-apt-repository "deb http://download.virtualbox.org/virtualbox/debian bionic contrib"
+          sudo apt update
+          sudo apt install virutalbox-6.0
+          
