@@ -51,5 +51,5 @@ jobs:
           echo 'apt update'
           sudo apt update
           echo 'install virtualbox'
-          sudo apt install virutalbox-6.0
+          sudo apt install virtualbox-6.1
           
