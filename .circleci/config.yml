@@ -14,9 +14,9 @@ jobs:
   welcome:
     executor: ubuntu
     steps:
-      - checkout:
-      - run: ./.cicd/install-packer.sh
-      - run: ./.cicd/install-virtualbox.sh
+      - run: ls
+      - run: bash ./.cicd/install-packer.sh
+      - run: bash ./.cicd/install-virtualbox.sh
       - run: make build-virtualbox
 # Orchestrate or schedule a set of jobs
 workflows:
