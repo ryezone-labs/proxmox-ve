@@ -15,10 +15,12 @@ steps:
   displayName: 'Run a one-line script'
 - task: Bash@3
   inputs:
-    filePath: './proxmox-ve/.cicd/install-packer.sh'
+    filePath: '$(Build.SourcesDirectory)/.cicd/install-packer.sh'
+  displayName: Install Packer
 - task: Bash@3
   inputs:
-    filePath: './proxmox-ve/.cicd/install-virtualbox.sh'
+    filePath: '$(Build.SourcesDirectory)/proxmox-ve/.cicd/install-virtualbox.sh'
+  displayName: Install Virtualbox
 - script: |
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
