@@ -16,7 +16,7 @@ steps:
 - task: Bash@3
   inputs:
     filePath: '$(Build.SourcesDirectory)/.cicd/install-unzip.sh'
-  displayName: Install Packer
+  displayName: Install Prerequite packages.
 - task: Bash@3
   inputs:
     filePath: '$(Build.SourcesDirectory)/.cicd/install-packer.sh'
