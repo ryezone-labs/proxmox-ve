@@ -27,7 +27,7 @@ steps:
   displayName: Install Virtualbox
 - task: Bash@3
   inputs:
-    filePath: '$(Build.SourcesDirectory)/.cicd/install-virtualbox.sh'
+    filePath: '$(Build.SourcesDirectory)/.cicd/run-makefile.sh'
   displayName: Build Virtualbox Image
 - script: |
     echo Add other tasks to build, test, and deploy your project.
