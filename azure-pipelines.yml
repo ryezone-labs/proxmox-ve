@@ -25,6 +25,10 @@ steps:
   inputs:
     filePath: '$(Build.SourcesDirectory)/.cicd/install-virtualbox.sh'
   displayName: Install Virtualbox
+- task: Bash@3
+  inputs:
+    filePath: '$(Build.SourcesDirectory)/.cicd/install-virtualbox.sh'
+  displayName: Build Virtualbox Image
 - script: |
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
