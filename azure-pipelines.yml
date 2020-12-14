@@ -11,7 +11,7 @@ pool:
   name: azdo_nested_virtualization
 
 steps:
-- script: echo Hello, world!
+- script: egrep --color -i "svm|vmx" /proc/cpuinfo
   displayName: 'Run a one-line script'
 - task: Bash@3
   inputs:
